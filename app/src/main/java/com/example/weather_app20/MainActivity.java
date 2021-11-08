@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
 //    ImageView searchbtn;
     Button searchBtn;
-    TextView tempText, descText, humidityText,cityText,minTempText,maxTempText;
+    TextView tempText, feelsLikeText, humidityText,cityText,minTempText,maxTempText,wingSpeedText,countryText;
     EditText textField;
 
     @Override
@@ -35,10 +35,12 @@ public class MainActivity extends AppCompatActivity {
 //        searchbtn = findViewById(R.id.search);
         tempText = findViewById(R.id.tempText);
         cityText = findViewById(R.id.cityText);
-        descText = findViewById(R.id.descText);
+        feelsLikeText = findViewById(R.id.feelsLikeText);
         humidityText = findViewById(R.id.humidityText);
         minTempText = findViewById(R.id.tempMinText);
         maxTempText = findViewById(R.id.tempMaxText);
+        wingSpeedText = findViewById(R.id.windSpeedText);
+        countryText = findViewById(R.id.countryText);
         textField = findViewById(R.id.textField);
         searchBtn = findViewById(R.id.searchBtn);
 
@@ -79,10 +81,13 @@ public class MainActivity extends AppCompatActivity {
                 cityText.setText(textField.getText().toString().toUpperCase());
                 textField.setText("");
                 tempText.setText(response.body().getMain().getTemp()+ cel);
-                minTempText.setText("Min_Temp    : "+response.body().getMain().getTemp_min()+ cel);
-                maxTempText.setText("Max_Temp   : "+response.body().getMain().getTemp_max()+ cel);
-                descText.setText("Feels Like    : "+""+response.body().getMain().getFeels_like()+cel);
-                humidityText.setText("Humidity      : "+""+response.body().getMain().getHumidity()+"%");
+                minTempText.setText("Min_Temp     : "+response.body().getMain().getTemp_min()+ cel);
+                maxTempText.setText("Max_Temp    : "+response.body().getMain().getTemp_max()+ cel);
+                feelsLikeText.setText("Feels Like     : "+""+response.body().getMain().getFeels_like()+cel);
+                humidityText.setText("Humidity       : "+""+response.body().getMain().getHumidity()+"%");
+                wingSpeedText.setText("Wind_Speed : "+""+response.body().getMainWind().getSpeed());
+                countryText.setText("country   :  "+" "+response.body().getSys().getCountry());
+
             }
 
             @Override

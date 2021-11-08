@@ -18,7 +18,31 @@ public class Main {
     @SerializedName("temp_min")
     String temp_min;
 
+    @SerializedName("speed")
+    String speed;
 
+    @SerializedName("country")
+    String country;
+
+    @SerializedName("icon")
+    String icon;
+
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(String speed) {
+        this.speed = speed;
+    }
 
     public String getTemp_max() {
         return temp_max;

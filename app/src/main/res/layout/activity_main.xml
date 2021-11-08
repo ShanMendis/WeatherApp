@@ -62,10 +62,20 @@
             android:textStyle="bold|italic" />
 
         <TextView
+            android:id="@+id/countryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="30dp"
+            android:textStyle="bold|italic"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#fff"
-            android:textSize="40dp"
+            android:textSize="50dp"
             android:textAlignment="center"
             android:textStyle="bold"
             android:id="@+id/tempText"
@@ -94,7 +104,7 @@
             android:layout_height="wrap_content"
             android:textColor="#fff"
             android:textSize="20dp"
-            android:id="@+id/descText"
+            android:id="@+id/feelsLikeText"
 
             />
 
@@ -106,6 +116,23 @@
             android:id="@+id/humidityText"
             />
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:id="@+id/windSpeedText"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:id="@+id/descText"
+            />
+
+
+    </LinearLayout>
 
 </LinearLayout>
